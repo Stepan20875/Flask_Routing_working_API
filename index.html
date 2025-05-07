@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой Блог Достижений</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать в мой блог!</h1>
+        <nav>
+            <a href="/home">Главная</a>
+            <a href="/notes">Дневник</a>
+            <!-- Другие ссылки -->
+        </nav>
+    </header>
+    <main>
+        <p>Привет! Здесь я делюсь своими достижениями и навыками.</p>
+        <img src="{{ url_for('static', filename='images/flaks.jpg') }}" alt="Моя фотография">
+        <ul>
+            <li><strong>Навык 1:</strong> Основы Flask</li>
+            <li><strong>Навык 2:</strong> HTML & CSS</li>
+            <li><strong>Навык 3:</strong> Шаблоны и формы Flask</li>
+            <li><strong>Навык 4:</strong> Основы Flask - SQLAlchemy. Работа с базами данных в Flask</li>
+            <li><strong>Навык 5:</strong> Авторизация Flask</li>
+            <li><strong>Навык 6:</strong> Работа с REST API</li>
+            <li><strong>Навык 7:</strong> Итоговый проект</li>
+        </ul>
+        <h2>Мои Достижения</h2>
+        <ol>
+            <li>Создал первый проект на Flask</li>
+            <li>Овладел навыком верстки веб-приложения</li>
+            <li>Овладел навыком работы с Jinja2</li>
+            <li>Научился работать с базами данных в Flask</li>
+            <li>Создал страницу авторизации и настраил БД</li>
+        </ol>
+        <a href="#">Ссылка</a>
+        <blockquote>Цитата</blockquote>
+        <hr>
+        <small>Небольшой текст</small>
+        <div>Раздел сайта</div>
+        <span>Текст в строке</span>
+    </main>
+    <footer>
+        <p>© 2025 Мой Блог</p>
+        <address>
+            Свяжитесь со мной: <a href="mailto:Outlook.com">snilsen2025@outlook.com</a>
+        </address>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дневник программиста</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Дневник программиста</h1>
+
+    <form method="POST" action="/notes">
+        <label for="title">Заголовок:</label><br>
+        <input type="text" id="title" name="title"><br><br>
+
+        <label for="subtitle">Подзаголовок:</label><br>
+        <input type="text" id="subtitle" name="subtitle"><br><br>
+
+        <label for="text">Текст записи:</label><br>
+        <textarea id="text" name="text" rows="5" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Добавить запись">
+    </form>
+
+    <h2>Мои записи</h2>
+    {% for title, content in notes.items() %}
+        <h3>{{ title }}</h3>
+        <h4>{{ content.subtitle }}</h4>
+        <p>{{ content.text }}</p>
+    {% endfor %}
+
+    <h2>Таблица прогресса</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Тема 1</th>
+                <th>Тема 2</th>
+                <th>Тема 3</th>
+                <th>Тема 4</th>
+                <th>Тема 5</th>
+                <th>Тема 6</th>
+                <th>Тема 7</th>
+                <th>Тема 8</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>100%</td>
+                <td>100%</td>
+                <td>100%</td>
+                <td>100%</td>
+                <td>100%</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>100%</td>
+                <td>100%</td>
+                <td>100%</td>
+                <td>100%</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Отлично!</td>
+                <td>Хорошо</td>
+                <td>Супер!</td>
+                <td>Неплохо</td>
+                <td>На.проверке</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
